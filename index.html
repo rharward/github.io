@@ -1,1 +1,24 @@
-hello World
+
+<h1>What makes you S.P.E.C.I.A.L?</h1>
+<div id="app">
+  <div class="shelf">
+    <div class="pack">
+      <card-component
+        v-for="card in cardStats"
+        :key="card.id"
+        :card_id="card.id"
+        :card_isflipped="card.isflipped"
+        :card_category="card.category"
+        :card_level="card.level"
+        :card_title="card.title"
+        :card_desc="card.desc"
+        :card_levelcap="card.levelcap"
+        :card_levelcurrent="card.levelcurrent"
+        :card_image="card.image"
+        :card_unflip="card.unflip"
+        v-on:emit_toggleflip="toggleflip(card.id)"
+      >
+      </card-component>
+    </div>
+  </div>
+</div>
